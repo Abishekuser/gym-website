@@ -11,7 +11,7 @@ import Contact from "./Contact";
 function App() {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#000000" }}>
-      <Navbar />
+      <Navbar/>
       <Hero />
       <Features/>
       <About/>
