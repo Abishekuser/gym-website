@@ -1,0 +1,146 @@
+.contact {
+  background-color: #0a0a0a;
+  padding: 80px 40px;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.contact-header .section-tag {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contact-header .section-title {
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.contact-header .section-subtitle {
+  color: #9ca3af;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+}
+
+/* ---------- INFO SIDE ---------- */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-info-item h4 {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-info-item p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ---------- FORM SIDE ---------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #171717;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.form-input,
+.form-textarea {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #dc2626;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #dc2626;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* ---------- SUCCESS STATE ---------- */
+
+.contact-success {
+  background-color: #171717;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  padding: 50px 32px;
+  text-align: center;
+}
+
+.contact-success h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.contact-success p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

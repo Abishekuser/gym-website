@@ -1,0 +1,161 @@
+/* ============================================
+   ANIMATIONS.CSS
+   All motion/animation rules live here, separate from layout/color
+   styles in Navbar.css. Import this file wherever animated effects
+   are needed.
+   ============================================ */
+
+/* ---------- Navbar background fade-in on scroll ---------- */
+
+.navbar {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- Logo hover wiggle ---------- */
+
+.logo-icon {
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .logo-icon {
+  transform: rotate(-15deg) scale(1.1);
+}
+
+/* ---------- Animated underline on nav links ---------- */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #dc2626;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ---------- Button lift on hover ---------- */
+
+.join-btn {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Fade-up animation for sections scrolling into view ---------- */
+/* Add className="fade-up" to any section wrapper to use this */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* ---------- Mobile menu slide-down ---------- */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu {
+  animation: slideDown 0.25s ease forwards;
+}
+
+/* ============================================
+   SCROLL-REVEAL ANIMATIONS
+   Used with useScrollReveal.js — each section starts hidden,
+   then animates in once isVisible becomes true.
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.fade-in {
+  transition: opacity 0.8s ease;
+}
+.reveal.fade-in.visible {
+  opacity: 1;
+}
+
+.reveal.slide-up {
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.zoom-in {
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Pricing card interactive hover ---------- */
+
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.25);
+  border-color: #dc2626;
+}
+
+/* ---------- Membership form input focus animation ---------- */
+
+.form-input,
+.form-textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+  transform: translateY(-2px);
+}
+
+.form-submit-btn {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.form-submit-btn:active {
+  transform: translateY(0) scale(0.97);
+}
