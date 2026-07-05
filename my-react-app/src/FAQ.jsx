@@ -3,8 +3,6 @@ import { ChevronDown } from "lucide-react";
 import "./FAQ.css";
 
 function FAQ() {
-  // Instead of true/false, we store WHICH question index is open.
-  // null means "none open". Clicking a question sets it to that index.
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -26,9 +24,6 @@ function FAQ() {
     },
   ];
 
-  // Toggle logic: if the clicked index is already open, close it (null).
-  // Otherwise, open the clicked one (this automatically closes any other,
-  // since only one index can be stored at a time).
   function handleToggle(index) {
     if (openIndex === index) {
       setOpenIndex(null);

@@ -2,12 +2,11 @@ import { Star } from "lucide-react";
 import useScrollReveal from "./useScrollReveal";
 import "./Testimonials.css";
 
-// Reusable card — one component, fed different data 3 times
 function TestimonialCard({ photo, name, role, rating, review }) {
   return (
     <div className="testimonial-card">
       <div className="testimonial-stars">
-        {/* Create an array of length `rating` and render one star per item */}
+        {/* Create an arrayone star per item */}
         {Array.from({ length: rating }).map((_, index) => (
           <Star key={index} size={16} color="#dc2626" fill="#dc2626" />
         ))}

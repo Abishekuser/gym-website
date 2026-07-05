@@ -14,7 +14,6 @@ function FeatureCard({ icon, title, description }) {
 }
 
 function Features() {
-  // Get a ref (to attach to the section) and isVisible (true once scrolled into view)
   const { ref, isVisible } = useScrollReveal();
 
   const services = [

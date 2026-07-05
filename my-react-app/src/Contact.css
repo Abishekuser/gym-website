@@ -38,7 +38,7 @@
   gap: 50px;
 }
 
-/* ---------- INFO SIDE ---------- */
+
 
 .contact-info {
   display: flex;
@@ -64,7 +64,6 @@
   font-size: 14px;
 }
 
-/* ---------- FORM SIDE ---------- */
 
 .contact-form {
   display: flex;
@@ -118,7 +117,7 @@
   background-color: #b91c1c;
 }
 
-/* ---------- SUCCESS STATE ---------- */
+
 
 .contact-success {
   background-color: #171717;

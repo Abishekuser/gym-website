@@ -7,8 +7,6 @@ const FORMSPREE_URL = "https://formspree.io/f/mqevnbpv";
 
 function Contact() {
   const { ref, isVisible } = useScrollReveal();
-
-  // ONE state object holds all form fields together
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,8 +14,8 @@ function Contact() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSending, setIsSending] = useState(false); // shows "Sending..." while waiting
-  const [error, setError] = useState(""); // shows a message if sending fails
+  const [isSending, setIsSending] = useState(false); 
+  const [error, setError] = useState(""); 
 
   function handleChange(e) {
     setFormData({
@@ -25,8 +23,6 @@ function Contact() {
       [e.target.name]: e.target.value,
     });
   }
-
-  // Actually sends the data to Formspree, waits for a response
   async function handleSubmit(e) {
     e.preventDefault();
     setIsSending(true);

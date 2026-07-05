@@ -4,7 +4,7 @@ import "./About.css";
 
 function About() {
   const { ref, isVisible } = useScrollReveal();
-  // Data array for the checklist — loop instead of writing each line by hand
+  
   const points = [
     "Certified professional trainers",
     "State-of-the-art equipment",
@@ -16,7 +16,7 @@ function About() {
     <section ref={ref} className={`about reveal slide-up ${isVisible ? "visible" : ""}`} id="about">
       <div className="about-container">
 
-        {/* LEFT: IMAGE */}
+        {}
         <div className="about-image-wrapper">
           <img
             src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=700"
@@ -25,7 +25,7 @@ function About() {
           />
         </div>
 
-        {/* RIGHT: TEXT CONTENT */}
+        {}
         <div className="about-content">
           <p className="section-tag">WHO WE ARE</p>
           <h2 className="section-title">
@@ -38,7 +38,7 @@ function About() {
             member — beginner or advanced — has what they need to succeed.
           </p>
 
-          {/* CHECKLIST */}
+          {}
           <ul className="about-list">
             {points.map((point) => (
               <li key={point} className="about-list-item">

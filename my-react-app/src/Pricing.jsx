@@ -2,8 +2,6 @@ import { Check } from "lucide-react";
 import useScrollReveal from "./useScrollReveal";
 import "./Pricing.css";
 
-// Reusable pricing card. Notice the `isPopular` prop controls
-// conditional styling AND a conditional badge — a new pattern.
 function PricingCard({ plan, price, features, isPopular }) {
   return (
     <div className={isPopular ? "pricing-card popular" : "pricing-card"}>

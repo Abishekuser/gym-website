@@ -1,8 +1,6 @@
 import { ArrowRight, Trophy, Users, UserCheck, Dumbbell } from "lucide-react";
 import "./Hero.css";
 
-// Reusable sub-component — used 4 times below, so we build it once
-// and pass different data in via props.
 function StatCard({ icon, number, label }) {
   return (
     <div className="stat-card">
@@ -16,8 +14,6 @@ function StatCard({ icon, number, label }) {
 }
 
 function Hero() {
-  // Data array — loop over it to render 4 StatCards instead of
-  // writing the same JSX block 4 times.
   const stats = [
     { icon: <Trophy size={28} color="#dc2626" />, number: "10+", label: "Years Experience" },
     { icon: <UserCheck size={28} color="#dc2626" />, number: "25+", label: "Expert Coaches" },
@@ -51,7 +47,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* STATS BAR */}
+      {}
       <div className="stats-bar">
         {stats.map((stat) => (
           <StatCard
